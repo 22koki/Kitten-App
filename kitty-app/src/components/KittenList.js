@@ -6,7 +6,7 @@ const KittenList = () => {
   useEffect(() => {
     const fetchKittenImages = async () => {
       try {
-        const response = await fetch('https://placekitten.com/200/300', {
+        const response = await fetch('https://placekitten.com', {
           method: 'GET',
           headers: {
             // Add any headers if needed
