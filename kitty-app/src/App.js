@@ -1,32 +1,25 @@
 // App.js
 import React, { useState } from 'react';
-import Header from './Header';
-import KittenList from './KittenList';
-import Footer from './Footer'; // Import Footer component
+import Header from '/home/fay/Kitten-App/kitty-app/src/components/Header.js';
+import KittenList from '/home/fay/Kitten-App/kitty-app/src/components/KittenList.js';
+import Footer from '/home/fay/Kitten-App/kitty-app/src/components/Footer.js';
+import './App.css'; // Import your CSS file
 
-const App = () => {
-  const [imageUrl, setImageUrl] = useState('');
+function App() {
+  const [imageUrls, setImageUrls] = useState([]);
 
   const fetchKittenImage = () => {
-    fetch('https://placekitten.com/200/300')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.url;
-      })
-      .then((url) => setImageUrl(url))
-      .catch((error) => console.error('Error fetching kitten image:', error));
+    const newUrl = `https://placekitten.com/${Math.floor(Math.random() * 400) + 200}/${Math.floor(Math.random() * 400) + 200}`;
+    setImageUrls((prevImageUrls) => [...prevImageUrls, newUrl]);
   };
 
   return (
-    <div className="app">
+    <div className="container">
       <Header />
-      <button onClick={fetchKittenImage}>Show me a Kitty</button>
-      <KittenList imageUrl={imageUrl} />
-      <Footer /> {/* Use Footer component */}
+      <KittenList imageUrls={imageUrls} />
+      <Footer fetchKittenImage={fetchKittenImage} />
     </div>
   );
-};
+}
 
 export default App;

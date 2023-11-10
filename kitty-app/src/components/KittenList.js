@@ -1,9 +1,12 @@
+// KittenList.js
 import React from 'react';
 
-const KittenList = ({ imageUrl }) => {
+const KittenList = ({ imageUrls }) => {
   return (
     <div className="kitten-list">
-      <img src={imageUrl} alt="Kitten" />
+      {imageUrls.map((url, index) => (
+        <img key={index} src={url} alt={`Kitten ${index}`} />
+      ))}
     </div>
   );
 };
