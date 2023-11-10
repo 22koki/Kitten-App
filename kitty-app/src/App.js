@@ -1,5 +1,8 @@
 // App.js
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCat } from '@fortawesome/free-solid-svg-icons'; // Replace with the specific kitten icon you want
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import Header from '/home/fay/Kitten-App/kitty-app/src/components/Header.js';
 import KittenList from '/home/fay/Kitten-App/kitty-app/src/components/KittenList.js';
 import Footer from '/home/fay/Kitten-App/kitty-app/src/components/Footer.js';
@@ -27,6 +30,10 @@ function App() {
   return (
     <div className="container">
       <Header />
+      <div className='icon-container'>
+      <FontAwesomeIcon icon={faCat} className='custom-icon' size="8x" color="black" /> {/* Example kitten icon */}
+      <FontAwesomeIcon icon={faPaw} className='custom-icon'  size='6x' color='grey' />
+      </div>
       <KittenList imageUrls={imageUrls} />
       <Footer onFetchKittenImage={fetchKittenImage} />
     </div>

@@ -32,7 +32,7 @@ button {
 
 button:hover {
   background-color: #45a049;
-  
+
 }
 
 .kitten-list {
@@ -48,5 +48,16 @@ button:hover {
   margin: 10px;
   border-radius: 8px;
   object-fit: cover;
+}
+.icon-container {
+  position: relative; /* Set the container to a relative position */
+}
+
+.custom-icon {
+  position: relative; /* Set the icon to an absolute position */
+  top: 5px; /* Adjust top position as needed */
+  left: 25px; /* Adjust left position as needed */
+  bottom: 10px;
+  /* Add any other styling you want for the icon */
 }
 
