@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <h1>Kitten Gallery</h1>
-      <p><em>Explore cute kitten images:</em></p>
+      <p><em>Explore cute kitten images by just a simple touch:</em></p>
     </header>
   );
 };
