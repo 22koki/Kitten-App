@@ -1,10 +1,10 @@
+// Footer.js
 import React from 'react';
-import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="app-footer">
-      <p>&copy; 2023 Kitten App</p>
+    <footer>
+      <p>&copy; 2023 Kitty App</p>
     </footer>
   );
 };

@@ -1,6 +1,8 @@
+// App.js
 import React, { useState } from 'react';
 import Header from './Header';
 import KittenList from './KittenList';
+import Footer from './Footer'; // Import Footer component
 
 const App = () => {
   const [imageUrl, setImageUrl] = useState('');
@@ -22,6 +24,7 @@ const App = () => {
       <Header />
       <button onClick={fetchKittenImage}>Show me a Kitty</button>
       <KittenList imageUrl={imageUrl} />
+      <Footer /> {/* Use Footer component */}
     </div>
   );
 };
