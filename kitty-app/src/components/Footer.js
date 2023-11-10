@@ -1,10 +1,10 @@
 // Footer.js
 import React from 'react';
 
-const Footer = ({ fetchKittenImage }) => {
+const Footer = ({ onFetchKittenImage }) => {
   return (
     <footer>
-      <button onClick={fetchKittenImage}>Get Kitty</button>
+      <button onClick={onFetchKittenImage}>Get Kitty</button>
     </footer>
   );
 };

@@ -9,7 +9,18 @@ function App() {
   const [imageUrls, setImageUrls] = useState([]);
 
   const fetchKittenImage = () => {
-    const newUrl = `https://placekitten.com/${Math.floor(Math.random() * 400) + 200}/${Math.floor(Math.random() * 400) + 200}`;
+    const generateUniqueUrl = () => {
+      const width = Math.floor(Math.random() * 400) + 200;
+      const height = Math.floor(Math.random() * 400) + 200;
+      return `https://placekitten.com/${width}/${height}`;
+    };
+
+    let newUrl;
+
+    do {
+      newUrl = generateUniqueUrl();
+    } while (imageUrls.includes(newUrl));
+
     setImageUrls((prevImageUrls) => [...prevImageUrls, newUrl]);
   };
 
@@ -17,7 +28,7 @@ function App() {
     <div className="container">
       <Header />
       <KittenList imageUrls={imageUrls} />
-      <Footer fetchKittenImage={fetchKittenImage} />
+      <Footer onFetchKittenImage={fetchKittenImage} />
     </div>
   );
 }
