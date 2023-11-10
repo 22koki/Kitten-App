@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Header from '/home/fay/Kitten-App/kitty-app/src/components/Header.js';
 import KittenList from '/home/fay/Kitten-App/kitty-app/src/components/KittenList.js';
 import Footer from '/home/fay/Kitten-App/kitty-app/src/components/Footer.js';
-import './App.css'; // Import your CSS file
+import '/home/fay/Kitten-App/kitty-app/src/App.css'; // Import your CSS file
 
 function App() {
   const [imageUrls, setImageUrls] = useState([]);
